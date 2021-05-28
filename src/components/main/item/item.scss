@@ -1,0 +1,45 @@
+.item {
+  height: 10em;
+  width: 17em;
+  background: #fff;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  padding: .2em;
+  display: flex;
+  cursor: pointer;
+  margin-right: 1em;
+  .item__picture {
+    padding: unset;
+    .item__img {
+      height: 101%;
+      width: 7em;
+      border-radius: .4em;
+      object-fit: cover;
+
+      pointer-events: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+  }
+  .item__info {
+    padding: 1em;
+    font-size: 1.2em;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .item__info-h1 {
+    }
+    .item__info-h2 {
+    }
+    .item__info-title {
+      margin-bottom: 1em;
+    }
+    .item__info-author {
+      font-size: .7em;
+    }
+  }
+}
