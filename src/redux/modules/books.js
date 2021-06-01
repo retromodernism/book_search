@@ -22,7 +22,7 @@ export const getBooks = (searchRequest) => async (dispatch) => {
   searchRequest = searchRequest.replace(/ /gi, "+");
 
   try {
-    await fetch(`http://openlibrary.org/search.json?title=${searchRequest}`)
+    await fetch(`https://openlibrary.org/search.json?title=${searchRequest}`)
       .then((response) => response.json())
       .then((data) =>
         data.docs.filter(

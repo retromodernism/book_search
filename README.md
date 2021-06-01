@@ -22,6 +22,10 @@ API:
 Для поиска книг нужно использовать Search API: https://openlibrary.org/dev/docs/api/search.
 Идентификатор обложки книги приходит в ответе поиска. Получить обложку книги можно, используя Cover API: https://openlibrary.org/dev/docs/api/covers.
 
+# Страница
+
+https://retromodernism-book-search.netlify.app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
