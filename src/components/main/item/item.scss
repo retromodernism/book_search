@@ -1,5 +1,5 @@
 .item {
-  height: 10em;
+  // height: 10em;
   width: 17em;
   background: #fff;
   border-radius: 0.5em;
@@ -11,7 +11,7 @@
   .item__picture {
     padding: unset;
     .item__img {
-      height: 101%;
+      height: 10em;
       width: 7em;
       border-radius: .4em;
       object-fit: cover;
@@ -31,12 +31,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 8.2em;
     .item__info-h1 {
+      word-wrap: break-word;
     }
     .item__info-h2 {
+      word-wrap: break-word;
     }
     .item__info-title {
       margin-bottom: 1em;
+      word-wrap: break-word;
     }
     .item__info-author {
       font-size: .7em;
