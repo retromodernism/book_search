@@ -6,7 +6,7 @@ function App(props) {
     <div className="App">
       <Main />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

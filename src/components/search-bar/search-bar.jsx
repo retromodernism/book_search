@@ -1,14 +1,24 @@
 import "./search-bar.scss";
 import { useState } from "react";
-import { getBooks as getBooksAction } from "./../../redux/modules/books";
+import {
+  getBooks as getBooksAction,
+  getBooksWithDelay as getBooksWithDelayAction,
+} from "./../../redux/modules/books";
 import { connect } from "react-redux";
 
-const SearchBar = ({ getBooks }) => {
+const SearchBar = ({ getBooks, getBooksWithDelay }) => {
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearchChange = (e) => {
     e.preventDefault();
+
     setSearchValue(e.target.value);
+
+    const request = e.target.value;
+
+    if (request) {
+      getBooksWithDelay(request)
+    }
   };
 
   const handleSearchSubmit = (e) => {
@@ -37,4 +47,5 @@ const SearchBar = ({ getBooks }) => {
 
 export default connect(null, {
   getBooks: getBooksAction,
+  getBooksWithDelay: getBooksWithDelayAction,
 })(SearchBar);

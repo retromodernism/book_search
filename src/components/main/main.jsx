@@ -1,11 +1,10 @@
 import SearchBar from "../search-bar/search-bar";
 import "./main.scss";
-import plug from "./item/book-img.jpg";
+// import plug from "./item/book-img.jpg";
 import Item from "./item/item";
 import { connect } from "react-redux";
-import { getBooks as getBooksAction } from "./../../redux/modules/books";
 
-const Main = ({ books, getBooks }) => {
+const Main = ({ books }) => {
   return (
     <main className="main">
       <div className="main__container">
@@ -20,6 +19,4 @@ const Main = ({ books, getBooks }) => {
   );
 };
 
-export default connect(({ books }) => ({ books: books.books }), {
-  getBooks: getBooksAction,
-})(Main);
+export default connect((state) => ({ books: state.books.books }))(Main);
