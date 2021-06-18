@@ -12,9 +12,9 @@ const configureStore = (reducers = {}, preloadedState = {}, middlewares = []) =>
     }),
     preloadedState,
     compose(
-      applyMiddleware(...middlewares, thunk, reduxLogger),
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
-      window.__REDUX_DEVTOOLS_EXTENSION__()
+      applyMiddleware(...middlewares, thunk, /*reduxLogger*/),
+      // window.__REDUX_DEVTOOLS_EXTENSION__ &&
+      // window.__REDUX_DEVTOOLS_EXTENSION__()
     )
   );
 
