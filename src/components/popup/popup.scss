@@ -1,0 +1,146 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+  .popup__content {
+    height: 400px;
+    width: 700px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #ffffff;
+    border-radius: 5px;
+
+    padding: 5px;
+  }
+}
+
+.popup-card {
+  display: flex;
+  justify-content: space-between;
+  .popup-card__close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 3em;
+    color: #050505;
+    cursor: pointer;
+  }
+  .popup-card__picture {
+    // flex-basis: 45%;
+    .popup-card__img {
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+
+      border-radius: 3px;
+    }
+  }
+  .popup-card__info {
+    flex-basis: 55%;
+    padding: 1em;
+    font-size: 1.2em;
+    font-style: italic;
+    justify-content: space-between;
+    .popup-card__info-title {
+      margin-bottom: 1em;
+    }
+    .popup-card__info-authors {
+    }
+    .popup-card__info-publication-date {
+    }
+    .popup-card__info-publisher {
+    }
+    .popup-card__info-isbn {
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .popup {
+    .popup__content {
+      height: 400px;
+      width: 700px;
+    }
+  }
+  .popup-card {
+    .popup-card__picture {
+      flex-basis: 45%;
+      .popup-card__img {
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .popup-card__info {
+    font-size: 1.2em;
+    .popup-card__info-title {
+      font-size: 1.5em;
+    }
+    .popup-card__info-authors {
+    }
+    .popup-card__info-publication-date {
+    }
+    .popup-card__info-publisher {
+    }
+    .popup-card__info-isbn {
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .popup {
+    .popup__content {
+      height: 500px;
+      width: 300px;
+    }
+  }
+  .popup-card {
+    flex-direction: column;
+    .popup-card__picture {
+      flex-basis: 300px;
+
+      display: flex;
+      justify-content: center;
+
+      .popup-card__img {
+        margin: auto;
+        max-height: 300px;
+        max-width: 100%;
+        object-fit: cover;
+
+        border-radius: 3px;
+      }
+    }
+    .popup-card__info {
+      font-size: 1em;
+      .popup-card__info-title {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+      }
+      .popup-card__info-authors {
+      }
+      .popup-card__info-publication-date {
+      }
+      .popup-card__info-publisher {
+      }
+      .popup-card__info-isbn {
+      }
+    }
+  }
+}

@@ -1,13 +1,25 @@
 .main {
   display: flex;
   justify-content: center;
-  padding: 100px;
   .main__container {
     .main__content {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       max-width: 54em;
       margin-top: 1em;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    padding: 20px;
   }
 }

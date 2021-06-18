@@ -1,6 +1,7 @@
 .search-bar {
+  margin: auto;
   position: relative;
-  width: 400px;
+  max-width: 400px;
   .search-bar__input-label-search {
     .search-bar__input-search {
       width: 100%;

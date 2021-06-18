@@ -3,7 +3,7 @@ import { useState } from "react";
 import {
   getBooks as getBooksAction,
   getBooksWithDelay as getBooksWithDelayAction,
-} from "./../../redux/modules/books";
+} from "./../../../redux/modules/books";
 import { connect } from "react-redux";
 
 const SearchBar = ({ getBooks, getBooksWithDelay }) => {
